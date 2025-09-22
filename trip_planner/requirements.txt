@@ -1,0 +1,9 @@
+streamlit
+crewai[tools]
+python-dotenv
+openai
+google-genai
+plotly
+numpy
+pandas
+requests
