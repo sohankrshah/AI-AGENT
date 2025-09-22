@@ -1,12 +1,9 @@
 import os
 import streamlit as st
-from dotenv import load_dotenv
 import sys
 sys.path.append('src')
 from src.trip_agent import TripAgent, TripTasks, TripCrew
 import time
-
-load_dotenv()
 
 st.set_page_config(
     page_title="AI Travel Planner", 
@@ -257,4 +254,5 @@ if generate_plan:
             progress_placeholder.empty()
             status_placeholder.empty()
             st.error(f"❌ Something went wrong: {str(e)}")
+
             st.info("💡 Try refreshing the page or check your internet connection.")
