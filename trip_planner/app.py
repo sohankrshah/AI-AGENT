@@ -1,7 +1,8 @@
 import os
 import streamlit as st
 import sys
-sys.path.append('src')
+__import__('pysqlite3')
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 from src.trip_agent import TripAgent, TripTasks, TripCrew
 import time
 
@@ -256,3 +257,4 @@ if generate_plan:
             st.error(f"❌ Something went wrong: {str(e)}")
 
             st.info("💡 Try refreshing the page or check your internet connection.")
+
