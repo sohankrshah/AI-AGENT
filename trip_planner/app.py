@@ -2,13 +2,8 @@ import os
 import streamlit as st
 import sys
 import os
-sys.path.append(os.path.join(os.path.dirname(__file__), 'src'))
 from src.trip_agent import TripAgent, TripTasks, TripCrew
 import time
-__import__('pysqlite3')
-sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
-
-
 st.set_page_config(
     page_title="AI Travel Planner", 
     page_icon="🌍", 
@@ -260,6 +255,7 @@ if generate_plan:
             st.error(f"❌ Something went wrong: {str(e)}")
 
             st.info("💡 Try refreshing the page or check your internet connection.")
+
 
 
 
