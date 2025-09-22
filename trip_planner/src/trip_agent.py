@@ -1,6 +1,6 @@
-from trip_agents import TripAgents
-from trip_tasks import TripTasks
-from trip_crew import EnhancedTripCrew
+from .trip_agents import TripAgents
+from .trip_tasks import TripTasks
+from .trip_crew import EnhancedTripCrew
 
 class TripAgent:
     def __init__(self):
@@ -26,5 +26,6 @@ class TripAgent:
             return agent_methods[agent_type]()
         else:
             raise ValueError(f"Unknown agent type: {agent_type}")
+
 
 TripCrew = EnhancedTripCrew
