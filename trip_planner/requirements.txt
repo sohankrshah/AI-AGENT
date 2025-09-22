@@ -1,5 +1,6 @@
 streamlit
 crewai[tools]
+chromadb
 python-dotenv
 openai
 google-genai
