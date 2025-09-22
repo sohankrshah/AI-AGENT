@@ -1,6 +1,6 @@
-from trip_agents import TripAgents
-from trip_tasks import TripTasks
-from trip_crew import EnhancedTripCrew
+from src.trip_agents import TripAgents
+from src.trip_tasks import TripTasks
+from src.trip_crew import EnhancedTripCrew
 
 class TripAgent:
     def __init__(self):
@@ -29,6 +29,7 @@ class TripAgent:
 
 
 TripCrew = EnhancedTripCrew
+
 
 
 
