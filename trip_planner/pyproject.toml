@@ -1,23 +1,27 @@
-[project]
-name = "trip_planner"
-version = "0.1.0"
-description = "Trip_Planner using crewAI"
-authors = [{ name = "Your Name", email = "you@example.com" }]
-requires-python = ">=3.10,<3.14"
-dependencies = [
-    "crewai[tools]>=0.186.1,<1.0.0"
-]
-
-[project.scripts]
-trip_planner = "trip_planner.main:run"
-run_crew = "trip_planner.main:run"
-train = "trip_planner.main:train"
-replay = "trip_planner.main:replay"
-test = "trip_planner.main:test"
-
 [build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
 
-[tool.crewai]
-type = "crew"
+[tool.poetry]
+name = "trip-planner"
+version = "0.1.0"
+description = "AI Travel Planner using CrewAI"
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+packages = [{include = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+crewai = {extras = ["tools"], version = "^0.186.1"}
+streamlit = "^1.28.0"
+requests = "^2.31.0"
+python-dotenv = "^1.0.0"
+pandas = "^2.0.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.0"
+black = "^23.0.0"
+flake8 = "^6.0.0"
+
+[tool.poetry.scripts]
+trip-planner = "app:main"
