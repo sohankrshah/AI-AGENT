@@ -1,7 +1,7 @@
 from crewai import Crew, Process
-from .trip_agents import TripAgents
-from .trip_tasks import TripTasks
-from .api_services import APIIntegrationService
+from trip_agents import TripAgents
+from trip_tasks import TripTasks
+from api_services import APIIntegrationService
 import logging
 
 # Configure logging for better debugging
@@ -423,3 +423,4 @@ class EnhancedTripCrew:
             logger.error(f"Error exporting plan data: {e}")
 
             return None
+
