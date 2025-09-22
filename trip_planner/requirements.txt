@@ -8,3 +8,6 @@ plotly
 numpy
 pandas
 requests
+pysqlite3-binary==0.5.2
+
+
