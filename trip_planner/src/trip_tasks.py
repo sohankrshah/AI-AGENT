@@ -1,5 +1,5 @@
 from crewai import Task
-from api_services import APIIntegrationService
+from src.api_services import APIIntegrationService
 
 class TripTasks:
     def __init__(self):
@@ -405,4 +405,5 @@ class TripTasks:
             ),
             agent=agent,
             expected_output="Rich cultural immersion guide with authentic experiences, local connections, and respectful cultural engagement strategies."
+
         )
