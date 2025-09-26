@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 __import__('pysqlite3')
 sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 sys.path.append('src')
-from trip_agent import TripAgent, TripTasks, TripCrew
+from src.trip_agent import TripAgent, TripTasks, TripCrew
 
 load_dotenv()
 
@@ -369,3 +369,4 @@ if not generate_plan:
     st.markdown("---")
     st.markdown('<div class="info-section">', unsafe_allow_html=True)
     st.markdown('</div>', unsafe_allow_html=True)
+
