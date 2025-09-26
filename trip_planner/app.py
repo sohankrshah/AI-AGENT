@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 __import__('pysqlite3')
 sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 sys.path.append('src')
-from src.trip_agent import TripAgent, TripTasks, TripCrew
+from trip_agent import TripAgent, TripTasks, TripCrew
 
 load_dotenv()
 
